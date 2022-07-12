@@ -3,14 +3,25 @@
     --secondary-colr: #85dcba;
     --teriary-color: #e8a87c;
     --quatrinary-color: #c38d9e;
-    --quinary-color: #41b3a3; 
+    --quinary-color: #5d82ba; 
     --text-color: white;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: font-family, 'Montserrat Alternates', sans-serif;
+    font-family: 'Share Tech Mono', monospace;
+    /* font-family: font-family, 'Montserrat Alternates', sans-serif; */
     background-color: var(--quinary-color);
     color: var(--text-color);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: white;
 }
