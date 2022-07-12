@@ -10,7 +10,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lato', sans-serif;
     /* font-family: font-family, 'Montserrat Alternates', sans-serif; */
     background-color: var(--quinary-color);
     color: var(--text-color);
