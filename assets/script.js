@@ -21,6 +21,7 @@ var redirect_uri = "http://127.0.0.1:5500/index.html"
 
 var client_id = "ee9b9fc735074ad49bfd4a2c10247b48";
 var client_secret = "9ec3e0120640458da0567d009217b4d9";
+
 var AUTHORIZE = "https://accounts.spotify.com/authorize";
 var TOKEN = "https://accounts.spotify.com/api/token";
 
@@ -29,8 +30,12 @@ function onPageLoad(){
     localStorage.setItem("client_secret", client_secret);
 
     if (window.location.search.length > 0) {
+        // handleRedirect();
+        console.log("ohno");
+    }
+    else {
         handleRedirect();
-      }
+    }
 }
 
 function handleRedirect(){
@@ -111,6 +116,17 @@ function handleAuthorizationResponse(){
     }
 }
 
+const moodMusic = {
+    rain: ['techno', 'moody', 'house', 'rock'],
+    Atmosphere: ['folk', 'R\&B', 'hip%20hop', 'easy'],
+    Clear: ['light', 'folk', 'pop', 'dance', 'house', 'psychedelic', 'cheese'],
+    Clouds: ['techno', 'moody', 'house', 'rock'],
+    Drizzle: ['folk', 'shoegaze', 'acoustic', 'minimal'],
+    Extreme: ['gabba', 'extreme%20metal', 'hot', 'burning', 'freezing'],
+    Snow: ['classic%metal', 'christmas', 'black%20metal'],
+    Thunderstorm: ['dark', 'heavy', 'metal', 'death%20metal', 'hard%techno']
+
+}
 
 const clouds = ['techno', 'moody', 'house', 'rock'];
 const additional = ['folk', 'pop', 'hip%20hop', 'shoegaze', 'house', 'metal', 'classic%20rock'];
@@ -125,15 +141,17 @@ function getWeather(city) {
         url: queryURL,
         method: "GET",
     }).then(function(cityWeatherResponse) {
-        // console.log(cityWeatherResponse.list[0].weather[0].main);
+        console.log(cityWeatherResponse.list[0].weather[0].main);
         var weather = cityWeatherResponse.list[0].weather[0].main.toLowerCase()
         // console.log(weather);
         // console.log(musicWeatherMap);
-        // for (var i = 0; i < musicWeatherMap.length; i++) {
-        //     if (weather == musicWeatherMap[i]) {
-        // 
-        //     }
-        // }
+        // console.log(musicWeatherMap[0]);
+        for (var i = 0; i < musicWeatherMap.length; i++) {
+            console.log(moodMusic.length);
+            // if (weather == musicWeatherMap[i]) {
+        
+            // }
+        }
         for (var i = 0; i < musicWeatherMap.length; i++) {
             if (weather == "clouds") {
                 var queryCategory = clouds[Math.floor(Math.random()*clouds.length)];
@@ -163,3 +181,4 @@ function getWeather(city) {
 // }
 
 getWeather('indianapolis');
+// onPageLoad();

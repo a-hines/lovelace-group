@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Title & Description -->
-    <header>
+    <header class="container">
         <h1>
             ☔WeatherSongs🎸
         </h1>
@@ -22,29 +22,70 @@
     </header>
 
     <!-- Daily Forecast -->
-    <section class="location-entry">
-        <div class="location-form">
-            <h3>What's Your Weather?</h3>
-            <p>Enter your current location or a location you'd like the daily forecast from!</p>
-            
-            <!-- Location Form Element -->
-            <form class="form-element">
-                <label for="city">Enter a city name:</label>
-                <input type="text" placeholder="City Name" name="city" id="city" />
-
-                <button type="submit">Forecast Now!</button>
-            </form>
+    <section class="location-entry container">
+        <div class="location-form row">
+            <div class="col-4">
+                <h3>What's Your Weather?</h3>
+                <p>Enter your current location or a location you'd like the daily forecast from!</p>
+                
+                <!-- Location Form Element -->
+                <form class="form-element">
+                    <label for="city">Enter a city name:</label>
+                    <input  type="text" placeholder="City Name" name="city" id="city" />
+                    <button class=" mt-2 btn btn-secondary" type="submit">Forecast Now!</button>
+                </form>
+            </div>
+            <div class="col-1 bg-light"></div>
+            <div class="col-7">
+                <div class="forecast-area">
+                    <h3>Placeholder for daily forecast</h3>
+                </div>
+            </div>
         </div>
-
-        <div class="forecast-area">
-            <p>Placeholder for daily forecast</p>
-        </div>
+        
     </section>
 
 
     <!-- Playlist Recommendations -->
-    <div>
-        Playlist Recs Placeholder
+    <div class="container text-center mt-2">
+        <h3>Playlist Recs Placeholder</h3>
+        <div class="row justify-content-md-center">
+            <div class="card col-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">title</p>
+                  <a href="#" class="btn btn-primary">hi</a>
+                </div>
+            </div>
+            <div class="card col-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">title</p>
+                  <a href="#" class="btn btn-primary">hi</a>
+                </div>
+            </div>
+            <div class="card col-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">title</p>
+                  <a href="#" class="btn btn-primary">hi</a>
+                </div>
+            </div>
+            <div class="card col-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">title</p>
+                  <a href="#" class="btn btn-primary">hi</a>
+                </div>
+            </div>
+            <div class="card col-2" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">title</p>
+                  <a href="#" class="btn btn-primary">hi</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 
