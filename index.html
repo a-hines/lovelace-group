@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <!-- Title & Description -->
-    <header class="container">
+    <!-- Title & Description top here can go onload="onPageLoad()" -->
+    <header class="container-fluid">
         <h1>
             ☔WeatherSongs🎸
         </h1>
@@ -22,7 +22,7 @@
     </header>
 
     <!-- Daily Forecast -->
-    <section class="location-entry container">
+    <section class="location-entry container-fluid">
         <div class="location-form row">
             <div class="col-4">
                 <h3>What's Your Weather?</h3>
@@ -30,15 +30,23 @@
                 
                 <!-- Location Form Element -->
                 <form class="form-element">
-                    <label for="city">Enter a city name:</label>
-                    <input  type="text" placeholder="City Name" name="city" id="city" />
-                    <button class=" mt-2 btn btn-secondary" type="submit">Forecast Now!</button>
+                    <label>Enter a city name:</label>
+                    <input class="form-control" type="text" placeholder="Enter city" id="enterCity">
+                    <button id="searchButton" class=" mt-2 btn btn-primary " type="submit">Forecast Now!</button> 
+                    <input class="btn btn-primary sign-in" type="button" onclick="requestAuthorization()" value="Sign In"/>
+                    <!-- this will ask for requestAuthorization -->
                 </form>
             </div>
             <div class="col-1 bg-light"></div>
             <div class="col-7">
-                <div class="forecast-area">
-                    <h3>Placeholder for daily forecast</h3>
+                <div class="Container text-center" >
+                    <div class="hud-sub">
+                        <h3 id="cityName" class="city-name align-middle"></h3>
+                        <img id="current-pic" alt="">
+                        <p id="temperature">Temperature:</p>
+                        <p id="humidity">Humidity:</p>
+                        <p id="windSpeed">Wind Speed:</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,42 +55,22 @@
 
 
     <!-- Playlist Recommendations -->
-    <div class="container text-center mt-2">
-        <h3>Playlist Recs Placeholder</h3>
+    <div class="container-fluid text-center mt-2">
+        <h3>List of Playlists</h3>
         <div class="row justify-content-md-center">
-            <div class="card col-2" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">title</p>
-                  <a href="#" class="btn btn-primary">hi</a>
+            <div class="card col-3" style="width: 18rem;">
+                <div id="playlist0">
+                    <div id="playlistImg0"></div>
                 </div>
             </div>
-            <div class="card col-2" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">title</p>
-                  <a href="#" class="btn btn-primary">hi</a>
+            <div class="card col-3" style="width: 18rem;">
+                <div id="playlist1">
+                    <div id="playlistImg1"></div>
                 </div>
             </div>
-            <div class="card col-2" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">title</p>
-                  <a href="#" class="btn btn-primary">hi</a>
-                </div>
-            </div>
-            <div class="card col-2" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">title</p>
-                  <a href="#" class="btn btn-primary">hi</a>
-                </div>
-            </div>
-            <div class="card col-2" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">title</p>
-                  <a href="#" class="btn btn-primary">hi</a>
+            <div class="card col-3" style="width: 18rem;">
+                <div id="playlist2">
+                    <div id="playlistImg2"></div>
                 </div>
             </div>
         </div>
