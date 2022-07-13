@@ -17,6 +17,12 @@ font-family: 'Lato', sans-serif;
     color: var(--text-color);
 }
 
+body {
+  background-color: #5d82ba;
+}
+
+
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: white;
