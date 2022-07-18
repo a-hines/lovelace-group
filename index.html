@@ -12,34 +12,35 @@
 </head>
 <body>
     <!-- Title & Description top here can go onload="onPageLoad()" -->
-    <header class="container-fluid">
+    <header class="container text-center mt-4">
         <h1>
             ☔WeatherSongs🎸
         </h1>
         <p>
             A place to check the weather and bring music to your ears.
         </p>
+        <p>Sign in to Spotify first to get playlist recommendations!</p>
+        <input class="btn btn-primary sign-in" type="button" onclick="requestAuthorization()" value="Sign In"/>
+        <!-- this will ask for requestAuthorization -->
     </header>
 
     <!-- Daily Forecast -->
-    <section class="location-entry container-fluid">
-        <div class="location-form row">
+    <section class="location-entry container mt-4">
+        <div class="location-form row justify-content-md-center">
             <div class="col-4">
-                <h3>What's Your Weather?</h3>
+                <h3 class="weather-container container text-center">What's Your Weather?</h3>
                 <p>Enter your current location or a location you'd like the daily forecast from!</p>
                 
                 <!-- Location Form Element -->
                 <form class="form-element">
                     <label>Enter a city name:</label>
                     <input class="form-control" type="text" placeholder="Enter city" id="enterCity">
-                    <button id="searchButton" class=" mt-2 btn btn-primary " type="submit">Forecast Now!</button> 
-                    <input class="btn btn-primary sign-in" type="button" onclick="requestAuthorization()" value="Sign In"/>
-                    <!-- this will ask for requestAuthorization -->
+                    <button id="searchButton" class=" mt-2 mb-2 btn btn-primary " type="submit">Forecast Now!</button> 
                 </form>
             </div>
-            <div class="col-1 bg-light"></div>
+            <div class="col-1"></div>
             <div class="col-7">
-                <div class="Container text-center" >
+                <div class="container forecast text-center" >
                     <div class="hud-sub">
                         <h3 id="cityName" class="city-name align-middle"></h3>
                         <img id="current-pic" alt="">
@@ -55,23 +56,17 @@
 
 
     <!-- Playlist Recommendations -->
-    <div class="container-fluid text-center mt-2">
-        <h3>List of Playlists</h3>
+    <div class="container text-center mt-2">
+        <h3 id="playlist-header">List of Playlists</h3>
         <div class="row justify-content-md-center">
-            <div class="card col-3" style="width: 18rem;">
-                <div id="playlist0">
-                    <div id="playlistImg0"></div>
-                </div>
+            <div class="card col-3 mr-3 mb-3" style="width: 18rem;">
+                <div id="playlist0"></div>
             </div>
-            <div class="card col-3" style="width: 18rem;">
-                <div id="playlist1">
-                    <div id="playlistImg1"></div>
-                </div>
+            <div class="card col-3 mr-3 mb-3" style="width: 18rem;">
+                <div id="playlist1"></div>
             </div>
-            <div class="card col-3" style="width: 18rem;">
-                <div id="playlist2">
-                    <div id="playlistImg2"></div>
-                </div>
+            <div class="card col-3 mb-3" style="width: 18rem;">
+                <div id="playlist2"></div>
             </div>
         </div>
     </div>
