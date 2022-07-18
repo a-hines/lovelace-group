@@ -1,6 +1,6 @@
 # WeatherSongs
 
-(https://a-hines.github.io/lovelace-group/)
+https://a-hines.github.io/lovelace-group/
 
 ### Summary
 * Weather dashboard that shows Spotify playlists based on weather
