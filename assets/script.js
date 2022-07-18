@@ -5,7 +5,7 @@ var APIKey = "c004625bb1231b99945c0d817472e343";
 
 //Redirect URL for spotify app
 
-var redirect_uri = "http://127.0.0.1:5500/index.html"
+var redirect_uri = "https://a-hines.github.io/lovelace-group/"
 
 //Credentials for Spotify
 
