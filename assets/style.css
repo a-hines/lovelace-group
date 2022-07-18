@@ -3,8 +3,8 @@
     --secondary-colr: #85dcba;
     --teriary-color: #e8a87c;
     --quatrinary-color: #c38d9e;
-    --quinary-color: #41b3a3; 
-    --text-color: white;
+    --quinary-color: #189e8c; 
+    --text-color: rgb(255, 247, 241);
 }
 
 * {
@@ -13,4 +13,48 @@
     font-family: font-family, 'Montserrat Alternates', sans-serif;
     background-color: var(--quinary-color);
     color: var(--text-color);
+}
+
+body {
+    background-color: var(--quinary-color);
+}
+
+.col-4 {
+    min-width: 375px;
+}
+
+.col-7 {
+    min-width: 375px;
+}
+
+
+.weather-container {
+    border-bottom: solid;
+}
+
+.forecast {
+    border: solid;
+}
+
+.card {
+    background-color: var(--quinary-color);
+    max-width: 400px;
+    min-width: 355px;
+}
+
+.card-url {
+    background-color: var(--teriary-color);
+    color: var(--text-color);
+}
+
+#playlist0 img, #playlist1 img, #playlist2 img {
+    width: 100%;
+    border: solid;
+}
+
+@media screen and (max-width: 500px) {
+    *{
+    flex-direction: column;
+    justify-content: center;
+    }
 }
